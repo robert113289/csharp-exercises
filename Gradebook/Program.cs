@@ -8,34 +8,36 @@ namespace Gradebook
     {
         public static void Main(string[] args)
         {
-            List<string> students = new List<string>();
+            List<string> Students = new List<string>();
             List<double> grades = new List<double>();
             string newStudent;
 
-            Console.WriteLine("Enter your students (or ENTER to finish):");
+            Console.WriteLine("Enter your students (or ENTER to finish:");
+
             do
             {
                 newStudent = Console.ReadLine();
                 if (newStudent != "")
                 {
-                    students.Add(newStudent);
+                    Students.Add(newStudent);
                 }
             }
             while (newStudent != "");
 
             // Get student grades
-            foreach (string student in students)
+            foreach (string student in Students)
             {
-                Console.WriteLine("Grade for " + student + ": ");
+                Console.WriteLine("Grade for " + student + ":");
+
                 double newGrade = double.Parse(Console.ReadLine());
                 grades.Add(newGrade);
             }
 
-            // Print class roster
+            // Print roster
             Console.WriteLine("\nClass roster:");
-            for (int i = 0; i < students.Count; i++)
+            for (int i = 0; i < Students.Count; i++)
             {
-                Console.WriteLine(students[i] + " (" + grades[i] + ")");
+                Console.WriteLine(Students[i] + "(" + grades[i] + ")");
             }
 
             double sum = grades.Sum();
@@ -43,6 +45,7 @@ namespace Gradebook
             Console.WriteLine("Average grade: " + avg);
 
             Console.ReadLine();
+
         }
     }
 }
