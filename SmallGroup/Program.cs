@@ -73,7 +73,7 @@ namespace SmallGroup
                 Console.WriteLine("id doesnt exist");
             }
 
-            IDictionary<string, (string,string),(string,string)> dictionary = new IDictionary<string,(string, string),(string,string)>();
+            Dictionary<string, Dictionary<string,string>, Dictionary<string,string>> dictionary = new IDictionary<string,(string, string),(string,string)>();
 
             dictionary.Add("hey", ("spanish", "hola"),("french","bonjour");
 
