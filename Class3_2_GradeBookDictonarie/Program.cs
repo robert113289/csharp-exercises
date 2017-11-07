@@ -45,7 +45,11 @@ namespace Class3_2_GradeBookDictonarie
 
             // Print class roster using string builder
             Console.WriteLine("\nClass roster:");
+
+
             StringBuilder MyStringBuilder = new StringBuilder("Student=");
+
+
             foreach (KeyValuePair<int, string> student in GradeBook)
             {
                 MyStringBuilder.Append(student);
